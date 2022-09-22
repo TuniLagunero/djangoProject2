@@ -48,9 +48,15 @@ def home_page(request):
         return redirect('contact')
 
 class PublisherListView(ListView):
-    model = Publisher
+    queryset = Publisher.objects.all().values()
+    template_name = 'auth/PublisherListView.html'
 
-def PublisherListView(request):
-    return render(request, "auth/PublisherListView.html")
+# def PublisherListView(request):
+#     query = Publisher.objects.all().values()
+#     print(query)
+#     context = {
+#         'query': query
+#     }
+#     return render(request, "auth/PublisherListView.html", context)
 
 

@@ -12,5 +12,5 @@ urlpatterns = [
     path('contact/', contact_page, name='contact'),
     path('logout/', auth_views.LogoutView.as_view(template_name='auth/logout.html'), name='logout'),
     path('admin/', admin.site.urls),
-    path('publishers/', PublisherListView),
+    path('publishers/', PublisherListView.as_view()),
 ]
