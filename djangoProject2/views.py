@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from .forms import RegisterForm, ContactForm
 from django.views.generic import ListView
 from .models import Publisher
+from django.contrib.auth.models import User
 
 from django.contrib.auth import get_user_model, login
 
@@ -51,6 +52,10 @@ class PublisherListView(ListView):
     queryset = Publisher.objects.all().values()
     template_name = 'auth/PublisherListView.html'
 
+class UserListView(ListView):
+
+    model = User
+    template_name = 'contact/userlist.html'
 # def PublisherListView(request):
 #     query = Publisher.objects.all().values()
 #     print(query)
