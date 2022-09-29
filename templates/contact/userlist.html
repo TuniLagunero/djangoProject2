@@ -1,3 +1,5 @@
+{% extends 'base/base.html' %}
+{% block content %}
 <h1>User List</h1>
 <ul>
 {% for user in object_list %}
@@ -5,4 +7,5 @@
 {% empty %}
     <li>No users yet.</li>
 {% endfor %}
+{% endblock %}
 </ul>
