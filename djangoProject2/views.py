@@ -56,6 +56,7 @@ class UserListView(ListView):
 
     model = User
     template_name = 'contact/userlist.html'
+
 # def PublisherListView(request):
 #     query = Publisher.objects.all().values()
 #     print(query)

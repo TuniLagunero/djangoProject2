@@ -15,4 +15,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('publishers/', PublisherListView.as_view()),
     path('userlists/', UserListView.as_view(), name='user-list'),
+
 ]
